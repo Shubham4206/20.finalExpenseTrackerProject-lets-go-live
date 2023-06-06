@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracker</title>
+    
+</head>
+<body>
+    <form id="expense">
+        <label for="amount">Amount:</label>
+        <input type="number" class="entry-field" id="amount" required>
+        <label for="description">Description:</label>
+        <input type="text" class="entry-field" id="description" required>
+        <label for="category">Category:</label>
+        <select id="category">
+          <option value="food">Food</option>
+          <option value="fuel">Fuel</option>
+          <option value="movie">Movie</option>
+          <option value="rent">Rent</option>
+          <option value="others">Others</option>
+        </select>
+        <button type="submit">Submit</button>
+    </form>
+        <button id="razorbutton">Buy Premium</button>
+        <button id="leaderboard_btn" style="display: none">Show Leaderboard</button>
+        <button onclick="download()" id="download_btn" style="display: none">Download</button>
+        <div ><h3 id="primeuser"></h3></div>
+    <div id="expense-list">
+        <div id="rows-per-page">
+            <form id="rows-form">
+                <label for="row-selector">No. of expenses per page:</label>
+                <select id="row-selector">
+                    <option selected disabled hidden>Choose here</option>
+                    <option>5</option>
+                    <option>10</option>
+                    <option>20</option>
+                    <option>50</option>
+                </select>
+            </form>
+        </div> 
+        <ul id="expense-items">
+            
+        </ul>
+        <div class="pagination">
+
+        </div>
+       
+        </div>
+
+        <div style="display: none" id="leaderboard-div">
+            <h2>Leaderboard</h2>
+            <ul id="leaderboard">
+    
+                
+            </ul>
+        </div>
+        </body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+        <script src="expense.js"></script>
+        <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+        </html>
